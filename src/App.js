@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import React from 'react';
 import axios from 'axios';
-
 import StatePop from './StatePop';
 // import Chart from 'chart.js';
 import './App.css';
@@ -22,8 +20,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <StatePop results={items} />
+      <div className="app-title">
+        <h1>Covid-19 Tracker (React.js)</h1>
+        <StatePop results={items} key="i" />
+      </div>
     </div>
   );
 };

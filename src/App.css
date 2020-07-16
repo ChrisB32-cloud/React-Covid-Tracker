@@ -1,3 +1,11 @@
 .app {
   background-color: lightslategray;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.app-title {
+  justify-content: center;
+  align-items: center;
 }
