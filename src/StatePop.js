@@ -1,36 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import React from 'react';
+import PopulateField from './PopulateField';
 
 const StatePop = props => {
+  const [covid, setCovid] = useState([]);
   const loopStates = props.results;
 
-  const loopTest = loopStates.map(st => (
-    <option value={st.state} key={st.state}>
-      {st.state}
-    </option>
-  ));
+  const LoopTest = () => {
+    return loopStates.map(st => (
+      <option value={st.state} key={st.state}>
+        {st.state}
+      </option>
+    ));
+  };
 
-  // const testingSt = loopTest.map(t => {
-  //   console.log(t.props.value);
-  // });
   const GrabSt = e => {
-    loopTest.map(t => {
-      const grSt = t.props.value;
+    const stTarget = e.target.value;
+    loopStates.map(state => {
+      if (stTarget === state.state) {
+        setCovid(state);
+      }
     });
-    // console.log(e.target.value);
   };
 
   return (
     <div className="state-dropdown">
-      <select>
-        {/* {loopStates.map(st => (
-          <option value={st.state} key={st.state}>
-            {st.state}
-          </option>
-        ))} */}
-        {/* <LoopTest onClick={loopStates} /> */}
-        {loopTest}
+      <select onChange={e => GrabSt(e)}>
+        <LoopTest />
       </select>
-      <button onClick={GrabSt}>Check State</button>
+      {/* <button>Check State</button> */}
+      <PopulateField feilds={covid} />
     </div>
   );
 };
