@@ -3,6 +3,9 @@ import React from 'react';
 const PopulateField = props => {
   const { state, positive, hospitalizedCurrently, death } = props.feilds;
 
+  // console.log(props.feilds);
+  // console.log(props);
+
   const CheckFields = () => {
     if (!state) {
       return <h1>Select State for details</h1>;

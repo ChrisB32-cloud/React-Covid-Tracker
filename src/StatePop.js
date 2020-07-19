@@ -6,6 +6,7 @@ const StatePop = props => {
   const [covid, setCovid] = useState([]);
   const loopStates = props.results;
   // let nextComponent = [];
+  // let nextComponent;
 
   const LoopTest = () => {
     return loopStates.map(st => (
@@ -22,6 +23,8 @@ const StatePop = props => {
         setCovid(state);
         // console.log(state);
         // nextComponent.push(state);
+
+        // nextComponent = state;
       }
     });
     // return;
