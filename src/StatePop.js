@@ -7,10 +7,9 @@ const StatePop = props => {
   const loopStates = props.results;
 
   // Need to try using asycn to avoid using state again
-  // let nextComponent = [];
-  // console.log(props.results);
 
-  const LoopTest = () => {
+  const loopTest = () => {
+    console.log('hello');
     return loopStates.map(st => (
       <option value={st.state} key={st.state}>
         {st.state}
@@ -28,15 +27,13 @@ const StatePop = props => {
     });
   }
 
-  // console.log(nextComponent);
-
   return (
     <div className="state-dropdown">
       <select onChange={e => GrabSt(e)}>
-        <LoopTest />
+        {loopTest()}
+        // //
       </select>
 
-      {/* <button>Check State</button> */}
       <PopulateField feilds={covid} />
     </div>
   );
