@@ -9,7 +9,7 @@ const StatePop = props => {
   // Need to try using asycn to avoid using state again
 
   const loopTest = () => {
-    console.log('hello');
+    // console.log('hello');
     return loopStates.map(st => (
       <option value={st.state} key={st.state}>
         {st.state}

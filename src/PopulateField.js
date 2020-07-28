@@ -7,7 +7,7 @@ const PopulateField = props => {
     if (!state) {
       return <h1>Select State for details</h1>;
     } else {
-      console.log('value changed to: ', state);
+      // console.log('value changed to: ', state);
       return (
         <div>
           <h1>State: {state} </h1>
