@@ -1,6 +1,7 @@
 // import React from 'react';
 import React from 'react';
 import './ChartGraph.css';
+import { configChart, configChartDates, configChartDth } from './helper';
 import { Line } from 'react-chartjs-2';
 
 // Think about putting the object in the return and using hooks
@@ -11,47 +12,17 @@ const ChartGraph = props => {
 
   // console.log(dataApi);
 
-  const posChartFilter = dataApi.filter((pst, idx) => {
-    if (idx % 5 === 0) {
-      return pst.positive;
-    }
-  });
-
-  const posChartData = posChartFilter.map(filt => {
-    return filt.positive;
-  });
-
-  const posChartFiltDates = dataApi.filter((pst, idx) => {
-    if (idx % 5 === 0) {
-      return pst.date;
-    }
-  });
-
-  const posDates = posChartFiltDates.map(filt => {
-    return filt.date;
-  });
-
-  const desChart = dataApi.filter((mort, idx) => {
-    if (idx % 5 === 0) {
-      if (mort.death === null) {
-        return (mort.death = 1);
-      }
-      return mort.death;
-    }
-  });
-
-  const desChartData = desChart.map(mort => {
-    return mort.death;
-  });
-
-  // console.log(desChartData);
+  const testHelper = configChart(dataApi);
+  const chartDates = configChartDates(dataApi);
+  const dthChart = configChartDth(dataApi);
 
   const chartData = {
-    labels: posDates,
+    labels: chartDates,
     datasets: [
       {
         label: 'Positive Cases in Us',
-        data: posChartData,
+        // data: posChartData,
+        data: testHelper,
         backgroundColor: [
           'rgba(255, 99, 132, 0.6)',
           'rgba(54, 162, 235, 0.6)',
@@ -64,11 +35,11 @@ const ChartGraph = props => {
   };
 
   const mortData = {
-    labels: posDates,
+    labels: chartDates,
     datasets: [
       {
         label: 'Mortality in Us',
-        data: desChartData,
+        data: dthChart,
         backgroundColor: [
           // 'rgba(255, 99, 132, 0.6)',
           'rgba(54, 162, 235, 0.6)',
@@ -83,6 +54,7 @@ const ChartGraph = props => {
         xAxes: [
           {
             ticks: {
+              // try with 0 value and uncomment min
               beginAtZero: true
               // min: 0
             }
