@@ -6,7 +6,6 @@ function configChart(data, passApi) {
         if (item[passApi] === null) {
           return (item[passApi] = 1);
         }
-
         return item[passApi];
       }
     })
@@ -14,22 +13,7 @@ function configChart(data, passApi) {
       // return filt.positive;
       return filt[passApi];
     });
-
   return testData;
-}
-
-function configChartDates(data) {
-  const charDates = data
-    .filter((item, idx) => {
-      if (idx % 5 === 0) {
-        return item.date;
-      }
-    })
-    .map(filt => {
-      return filt.date;
-    });
-
-  return charDates;
 }
 
 function formatDates(formatArr) {
@@ -41,4 +25,4 @@ function formatDates(formatArr) {
   return dates;
 }
 
-export { configChart, configChartDates, formatDates };
+export { configChart, formatDates };

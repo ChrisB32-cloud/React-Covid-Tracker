@@ -1,7 +1,7 @@
 // import React from 'react';
 import React from 'react';
 import './ChartGraph.css';
-import { configChart, configChartDates, formatDates } from './helper';
+import { configChart, formatDates } from './helper';
 import { Line } from 'react-chartjs-2';
 
 // Think about putting the object in the return and using hooks
@@ -19,7 +19,7 @@ const ChartGraph = props => {
   };
 
   const testHelper = configChart(dataApi, filterValue.positive);
-  const chartDates = configChartDates(dataApi, filterValue.date);
+  const chartDates = configChart(dataApi, filterValue.date);
   const dthChart = configChart(dataApi, filterValue.death);
 
   const datesFormt = formatDates(chartDates);
