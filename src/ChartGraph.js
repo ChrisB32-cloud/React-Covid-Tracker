@@ -1,7 +1,7 @@
 // import React from 'react';
 import React from 'react';
 import './ChartGraph.css';
-import { configChart, configChartDates, configChartDth } from './helper';
+import { configChart, configChartDates, formatDates } from './helper';
 import { Line } from 'react-chartjs-2';
 
 // Think about putting the object in the return and using hooks
@@ -10,14 +10,22 @@ import { Line } from 'react-chartjs-2';
 const ChartGraph = props => {
   const dataApi = props.resp;
 
-  // console.log(dataApi);
+  // let _su = ['positive'];
+  const filterValue = {
+    positive: 'positive',
+    negative: 'negative',
+    date: 'date',
+    death: 'death'
+  };
 
-  const testHelper = configChart(dataApi);
-  const chartDates = configChartDates(dataApi);
-  const dthChart = configChartDth(dataApi);
+  const testHelper = configChart(dataApi, filterValue.positive);
+  const chartDates = configChartDates(dataApi, filterValue.date);
+  const dthChart = configChart(dataApi, filterValue.death);
+
+  const datesFormt = formatDates(chartDates);
 
   const chartData = {
-    labels: chartDates,
+    labels: datesFormt,
     datasets: [
       {
         label: 'Positive Cases in Us',
@@ -35,7 +43,7 @@ const ChartGraph = props => {
   };
 
   const mortData = {
-    labels: chartDates,
+    labels: datesFormt,
     datasets: [
       {
         label: 'Mortality in Us',
@@ -55,8 +63,8 @@ const ChartGraph = props => {
           {
             ticks: {
               // try with 0 value and uncomment min
-              beginAtZero: true
-              // min: 0
+              beginAtZero: true,
+              min: 0
             }
           }
         ]
