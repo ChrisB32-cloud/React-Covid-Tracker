@@ -2,7 +2,7 @@ function configChart(data, passApi) {
   // console.log(data);
   const testData = data
     .filter((item, idx) => {
-      if (idx % 5 === 0) {
+      if (idx % 3 === 0) {
         if (item[passApi] === null) {
           return (item[passApi] = 1);
         }
