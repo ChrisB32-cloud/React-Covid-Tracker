@@ -24,5 +24,21 @@ function formatDates(formatArr) {
   });
   return dates;
 }
+function increaceRateFormula(data, pos, dth, recov) {
+  const formulaResults = data
+    .map((item, idx) => {
+      if (idx % 3 === 0) {
+        let res = item[pos] - item[dth] - item[recov];
+        if (res === 0) {
+          return (res = 1);
+        }
+        return res;
+      }
+    })
+    .filter(d => {
+      return d;
+    });
+  return formulaResults;
+}
 
-export { configChart, formatDates };
+export { configChart, formatDates, increaceRateFormula };

@@ -6,6 +6,8 @@ const StatePop = props => {
   const [covid, setCovid] = useState([]);
   const loopStates = props.results;
 
+  // console.log(loopStates);
+
   // Need to try using asycn to avoid using state again
 
   const loopTest = () => {

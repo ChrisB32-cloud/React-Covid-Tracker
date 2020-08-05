@@ -1,19 +1,21 @@
 // import React from 'react';
 import React from 'react';
 import './ChartGraph.css';
-import { configChart, formatDates } from './helper';
+import { configChart, formatDates, increaceRateFormula } from './helper';
 import { lineGraph } from './graphHelper';
-import { Line, Bar } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
 // Think about putting the object in the return and using hooks
 // to update the particular data we want to update
 
 const ChartGraph = props => {
   const dataApi = props.resp;
+  // console.log(dataApi);
 
   const filterValue = {
     positive: 'positive',
     negative: 'negative',
+    recovered: 'recovered',
     date: 'date',
     death: 'death'
   };
@@ -22,6 +24,16 @@ const ChartGraph = props => {
   const chartDates = configChart(dataApi, filterValue.date);
   const dthChart = configChart(dataApi, filterValue.death);
   const datesFormt = formatDates(chartDates);
+  // const recoveredData = configChart(dataApi, filterValue.recovered);
+
+  const increaseFormula = increaceRateFormula(
+    dataApi,
+    filterValue.positive,
+    filterValue.death,
+    filterValue.recovered
+  );
+  console.log(dthChart);
+  console.log(increaseFormula);
 
   const positiveChartData = lineGraph(
     datesFormt,
@@ -30,17 +42,25 @@ const ChartGraph = props => {
     'rgba(255, 99, 132, 0.6)'
   );
 
-  const MortalityChartData = lineGraph(
+  const mortalityChartData = lineGraph(
     datesFormt,
     'Mortality Rate in US',
     dthChart,
     'rgba(54, 162, 235, 0.6)'
   );
 
+  const increaseChartData = lineGraph(
+    datesFormt,
+    'Increase in Us',
+    increaseFormula,
+    'rgba(255, 206, 86, 0.6)'
+  );
+
   return (
     <div className="charts-container">
       <Line data={positiveChartData} />
-      <Line data={MortalityChartData} />
+      <Line data={mortalityChartData} />
+      <Line data={increaseChartData} />
     </div>
   );
 };
