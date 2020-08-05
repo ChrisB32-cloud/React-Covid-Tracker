@@ -32,8 +32,8 @@ const ChartGraph = props => {
     filterValue.death,
     filterValue.recovered
   );
-  console.log(dthChart);
-  console.log(increaseFormula);
+  // console.log(dthChart);
+  // console.log(increaseFormula);
 
   const positiveChartData = lineGraph(
     datesFormt,
