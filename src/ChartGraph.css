@@ -1,5 +1,32 @@
 .charts-container {
+  /* display: flex; */
+  /* margin-top: 10px;
+  margin-left: 200px;
+  margin-right: 200px; */
+}
+
+.posChart {
+  /* display: flex; */
+  background-color: rgba(23, 54, 67, 0.8);
   margin-top: 10px;
   margin-left: 200px;
   margin-right: 200px;
+  margin-bottom: 10px;
+  /* color: aliceblue; */
+}
+
+.dthChart {
+  background-color: rgba(23, 54, 47, 0.8);
+  margin-top: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 10px;
+}
+
+.incChart {
+  background-color: rgba(23, 40, 80, 0.8);
+  margin-top: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 20px;
 }

@@ -58,9 +58,15 @@ const ChartGraph = props => {
 
   return (
     <div className="charts-container">
-      <Line data={positiveChartData} />
-      <Line data={mortalityChartData} />
-      <Line data={increaseChartData} />
+      <div className="posChart">
+        <Line data={positiveChartData} />
+      </div>
+      <div className="dthChart">
+        <Line data={mortalityChartData} />
+      </div>
+      <div className="incChart">
+        <Line data={increaseChartData} />
+      </div>
     </div>
   );
 };
