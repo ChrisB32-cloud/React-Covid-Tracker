@@ -1,4 +1,4 @@
-function lineGraph(datesLables, chartLable, chartData, color) {
+function lineGraph(datesLables, chartLable, chartData, lineColor) {
   const graphData = {
     labels: datesLables,
     datasets: [
@@ -6,27 +6,34 @@ function lineGraph(datesLables, chartLable, chartData, color) {
         label: chartLable,
         data: chartData,
         backgroundColor: [
-          `${color}`,
+          `${lineColor}`,
           'rgba(54, 162, 235, 0.6)',
           'rgba(255, 206, 86, 0.6)',
           'rgba(75, 192, 192, 0.6)'
         ],
         borderWidth: 3
       }
-    ],
-    options: {
-      scales: {
-        xAxes: [
-          {
-            ticks: {
-              // try with 0 value and uncomment min
-              beginAtZero: true,
-              min: 0
-            }
-          }
-        ]
-      }
-    }
+    ]
+    // options: {
+    //   scales: {
+    //     xAxes: [
+    //       {
+    //         ticks: {
+    //           // try with 0 value and uncomment min
+    //           fontColor: 'blue',
+    //           beginAtZero: true,
+    //           min: 0
+    //           // color: 'blue'
+    //         }
+    //       }
+    //     ]
+    //   },
+    //   legend: {
+    //     labels: {
+    //       fontColor: 'red'
+    //     }
+    //   }
+    // }
   };
 
   return graphData;

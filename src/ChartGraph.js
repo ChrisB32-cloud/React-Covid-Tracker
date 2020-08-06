@@ -60,12 +60,15 @@ const ChartGraph = props => {
     <div className="charts-container">
       <div className="posChart">
         <Line data={positiveChartData} />
+        <h3>Source: The COVID Tracking Project</h3>
       </div>
       <div className="dthChart">
         <Line data={mortalityChartData} />
+        <h3>Source: The COVID Tracking Project</h3>
       </div>
       <div className="incChart">
         <Line data={increaseChartData} />
+        <h3>Source: The COVID Tracking Project</h3>
       </div>
     </div>
   );
