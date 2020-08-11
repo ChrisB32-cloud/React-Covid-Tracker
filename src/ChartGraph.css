@@ -1,5 +1,6 @@
 .charts-container {
   display: flex;
+  color: cornsilk;
   flex-direction: column;
   margin: 80px;
   height: 100;
@@ -13,7 +14,7 @@
 
 .posChart {
   border-radius: 5px;
-  color: cornsilk;
+  /* color: cornsilk; */
   background-color: rgba(23, 54, 67, 0.8);
   text-align: left;
   padding-bottom: 5px;
@@ -26,7 +27,7 @@
 
 .dthChart {
   border-radius: 5px;
-  color: cornsilk;
+  /* color: cornsilk; */
   text-align: left;
   padding-bottom: 5px;
   background-color: rgba(23, 54, 47, 0.8);
@@ -38,7 +39,7 @@
 
 .incChart {
   border-radius: 5px;
-  color: cornsilk;
+  /* color: cornsilk; */
   text-align: left;
   padding-bottom: 5px;
   background-color: rgba(23, 40, 80, 0.8);
