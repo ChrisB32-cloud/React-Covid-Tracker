@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import StatePop from './StatePop';
 import ChartGraph from './ChartGraph';
+
 import './App.css';
 
 const App = () => {
