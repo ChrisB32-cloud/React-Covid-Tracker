@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        'https://covidtracking.com/api/v1/states/current.json'
+        'https://api.covidtracking.com/v1/states/current.json'
       );
       // console.log(response.data);
       setItems(response.data);
@@ -20,9 +20,9 @@ const App = () => {
 
     const fetchChartData = async () => {
       const results = await axios.get(
-        'https://covidtracking.com/api/v1/us/daily.json'
+        'https://api.covidtracking.com/v1/us/daily.json'
       );
-      // console.log(results.data);
+      console.log(results.data);
       const passData = await results.data;
       // console.log(passData.reverse());
 

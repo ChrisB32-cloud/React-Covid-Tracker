@@ -51,7 +51,7 @@ const ChartGraph = props => {
 
   const increaseChartData = lineGraph(
     datesFormt,
-    'Increase in Us',
+    'New per Day in Us',
     increaseFormula,
     'rgba(255, 206, 86, 0.5)'
   );

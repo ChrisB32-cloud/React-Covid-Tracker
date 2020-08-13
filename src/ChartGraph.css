@@ -15,7 +15,8 @@
 .posChart {
   border-radius: 5px;
   /* color: cornsilk; */
-  background-color: rgba(23, 54, 67, 0.8);
+  /* background-color: rgba(23, 54, 67, 0.8); */
+  background-color: rgba(24, 58, 73, 0.8);
   text-align: left;
   padding-bottom: 5px;
   margin-top: 10px;
@@ -42,7 +43,8 @@
   /* color: cornsilk; */
   text-align: left;
   padding-bottom: 5px;
-  background-color: rgba(23, 40, 80, 0.8);
+  /* background-color: rgba(23, 40, 80, 0.8); */
+  background-color: rgba(5, 25, 71, 0.8);
   margin-top: 10px;
   /* margin-left: 200px; */
   /* margin-right: 200px; */
