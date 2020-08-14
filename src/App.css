@@ -1,11 +1,18 @@
 .app {
   text-align: center;
-  background-color: lightslategray;
+  /* background-color: lightslategray; */
   justify-content: center;
   align-items: center;
   padding: 5px;
 }
 
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  height: 400px;
+  width: 400px;
+}
 .app-title {
   text-align: center;
   justify-content: center;

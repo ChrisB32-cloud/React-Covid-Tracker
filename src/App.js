@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+// import { img1 } from 'src/covid-wall-pics';
+import img1 from './img1.jpg';
 import axios from 'axios';
 import StatePop from './StatePop';
 import ChartGraph from './ChartGraph';
@@ -35,6 +37,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <img src={img1} alt="" />
       <div className="app-title">
         <h1>Covid-19 Tracker (React.js)</h1>
         <StatePop results={items} key="i" />
