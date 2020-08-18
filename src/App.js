@@ -37,11 +37,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <img src={img1} alt="" />
-      <div className="app-title">
-        <h1>Covid-19 Tracker (React.js)</h1>
-        <StatePop results={items} key="i" />
-        <ChartGraph resp={chartItems} />
+      <div className="background">
+        <div className="app-title">
+          <h1>Covid-19 Tracker (React.js)</h1>
+          <StatePop results={items} key="i" />
+          <ChartGraph resp={chartItems} />
+        </div>
       </div>
     </div>
   );
