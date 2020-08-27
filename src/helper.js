@@ -9,7 +9,7 @@ function configChart(data, passApi) {
         return item[passApi];
       }
     })
-    .map(filt => {
+    .map((filt) => {
       // return filt.positive;
       return filt[passApi];
     });
@@ -17,7 +17,7 @@ function configChart(data, passApi) {
 }
 
 function formatDates(formatArr) {
-  const dates = formatArr.map(d => {
+  const dates = formatArr.map((d) => {
     const fix = d.toString().slice(4, 8);
     const newFix = fix.slice(0, 2) + '-' + fix.slice(2);
     return newFix;
@@ -35,7 +35,7 @@ function increaceRateFormula(data, pos, dth, recov) {
         return res;
       }
     })
-    .filter(d => {
+    .filter((d) => {
       return d;
     });
   return formulaResults;

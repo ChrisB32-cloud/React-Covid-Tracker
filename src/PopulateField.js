@@ -1,6 +1,6 @@
 import React from 'react';
 // import StatePop from './StatePop';
-const PopulateField = props => {
+const PopulateField = (props) => {
   const { state, positive, hospitalized, death } = props.feilds;
 
   const mortRatePre = (death / positive) * 100;
@@ -15,7 +15,7 @@ const PopulateField = props => {
         <div>
           <h1>State: {state} </h1>
           <h2>Positive: {positive} </h2>
-          <h2>Hospitalized :{hospitalized}</h2>
+          <h2>Hospitalized :{hospitalized === null ? 'N/A' : hospitalized}</h2>
           <h2>Deaths: {death} </h2>
           <h2>Mortality: {mortRate}% </h2>
         </div>

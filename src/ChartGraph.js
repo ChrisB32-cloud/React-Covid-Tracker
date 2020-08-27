@@ -8,23 +8,28 @@ import { Line } from 'react-chartjs-2';
 // Think about putting the object in the return and using hooks
 // to update the particular data we want to update
 
-const ChartGraph = props => {
+const ChartGraph = (props) => {
   const dataApi = props.resp;
-  // console.log(dataApi);
+  console.log(dataApi);
 
   const filterValue = {
     positive: 'positive',
     negative: 'negative',
     recovered: 'recovered',
     date: 'date',
-    death: 'death'
+    death: 'death',
+    deathIncrease: 'deathIncrease',
+    inIcuCumulative: 'inIcuCumulative',
   };
 
   const testHelper = configChart(dataApi, filterValue.positive);
   const chartDates = configChart(dataApi, filterValue.date);
-  const dthChart = configChart(dataApi, filterValue.death);
+  const dthChart = configChart(dataApi, filterValue.inIcuCumulative);
   const datesFormt = formatDates(chartDates);
   // const recoveredData = configChart(dataApi, filterValue.recovered);
+
+  // console.log(dthChart);
+  // console.log(testHelper);
 
   const increaseFormula = increaceRateFormula(
     dataApi,
@@ -44,7 +49,7 @@ const ChartGraph = props => {
 
   const mortalityChartData = lineGraph(
     datesFormt,
-    'Mortality Rate in US',
+    'ICU Rate in US',
     dthChart,
     'rgba(54, 162, 235, 0.5)'
   );

@@ -24,7 +24,7 @@ const App = () => {
       const results = await axios.get(
         'https://api.covidtracking.com/v1/us/daily.json'
       );
-      console.log(results.data);
+      // console.log(results.data);
       const passData = await results.data;
       // console.log(passData.reverse());
 
