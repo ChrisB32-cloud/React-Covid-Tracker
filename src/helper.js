@@ -1,19 +1,23 @@
 function configChart(data, passApi) {
-  // console.log(data);
-  const testData = data
-    .filter((item, idx) => {
+  console.log(data);
+  const myData = data
+    .map((item, idx) => {
       if (idx % 3 === 0) {
         if (item[passApi] === null) {
+          return (item[passApi] = 1);
+        }
+        if (item[passApi] === 0) {
           return (item[passApi] = 1);
         }
         return item[passApi];
       }
     })
-    .map((filt) => {
+    .filter((filt) => {
       // return filt.positive;
-      return filt[passApi];
+      return filt;
+      // [passApi]
     });
-  return testData;
+  return myData;
 }
 
 function formatDates(formatArr) {

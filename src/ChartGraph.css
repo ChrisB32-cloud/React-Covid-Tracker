@@ -26,6 +26,20 @@
   /* color: aliceblue; */
 }
 
+.posChartChange {
+  border-radius: 5px;
+  /* color: cornsilk; */
+  /* background-color: rgba(23, 54, 67, 0.8); */
+  background-color: rgba(24, 58, 73, 0.8);
+  text-align: left;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  /* margin-left: 200px; */
+  /* margin-right: 200px; */
+  margin-bottom: 10px;
+  /* color: aliceblue; */
+}
+
 .dthChart {
   border-radius: 5px;
   /* color: cornsilk; */
@@ -36,6 +50,48 @@
   /* margin-left: 200px; */
   /* margin-right: 200px; */
   margin-bottom: 10px;
+}
+
+.dthChartChange {
+  border-radius: 5px;
+  /* color: cornsilk; */
+  /* background-color: rgba(23, 54, 67, 0.8); */
+  background-color: rgba(24, 58, 73, 0.8);
+  text-align: left;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  /* margin-left: 200px; */
+  /* margin-right: 200px; */
+  margin-bottom: 10px;
+  /* color: aliceblue; */
+}
+
+.hospChart {
+  border-radius: 5px;
+  /* color: cornsilk; */
+  /* background-color: rgba(23, 54, 67, 0.8); */
+  background-color: rgba(24, 58, 73, 0.8);
+  text-align: left;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  /* margin-left: 200px; */
+  /* margin-right: 200px; */
+  margin-bottom: 10px;
+  /* color: aliceblue; */
+}
+
+.hospChartChange {
+  border-radius: 5px;
+  /* color: cornsilk; */
+  /* background-color: rgba(23, 54, 67, 0.8); */
+  background-color: rgba(24, 58, 73, 0.8);
+  text-align: left;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  /* margin-left: 200px; */
+  /* margin-right: 200px; */
+  margin-bottom: 10px;
+  /* color: aliceblue; */
 }
 
 .incChart {
