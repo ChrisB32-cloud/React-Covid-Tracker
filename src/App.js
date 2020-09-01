@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { img1 } from 'src/covid-wall-pics';
 import img1 from './img1.jpg';
 import axios from 'axios';
 import StatePop from './StatePop';

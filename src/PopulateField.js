@@ -1,5 +1,6 @@
 import React from 'react';
-// import StatePop from './StatePop';
+import './PopulateField.css';
+
 const PopulateField = (props) => {
   const { state, positive, hospitalized, death } = props.feilds;
 
@@ -12,12 +13,12 @@ const PopulateField = (props) => {
     } else {
       // console.log('value changed to: ', state);
       return (
-        <div>
-          <h1>State: {state} </h1>
-          <h2>Positive: {positive} </h2>
+        <div className="popFieldBox">
+          <h1>State: {state === null ? 'N/A' : state} </h1>
+          <h2>Positive: {positive === null ? 'N/A' : positive} </h2>
           <h2>Hospitalized :{hospitalized === null ? 'N/A' : hospitalized}</h2>
-          <h2>Deaths: {death} </h2>
-          <h2>Mortality: {mortRate}% </h2>
+          <h2>Deaths: {death === null ? 'N/A' : death} </h2>
+          <h2>Mortality: {mortRate === 'NaN' ? 'N/A' : mortRate}% </h2>
         </div>
       );
     }

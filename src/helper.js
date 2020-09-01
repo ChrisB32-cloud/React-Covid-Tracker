@@ -13,7 +13,6 @@ function configChart(data, passApi) {
       }
     })
     .filter((filt) => {
-      // return filt.positive;
       return filt;
       // [passApi]
     });

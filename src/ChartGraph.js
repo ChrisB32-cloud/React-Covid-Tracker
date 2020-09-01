@@ -4,7 +4,6 @@ import './ChartGraph.css';
 import { configChart, formatDates, increaceRateFormula } from './helper';
 import { lineGraph } from './graphHelper';
 import { Line } from 'react-chartjs-2';
-// import { Line } from 'react-chartjs';
 
 // Think about putting the object in the return and using hooks
 // to update the particular data we want to update
@@ -96,7 +95,7 @@ const ChartGraph = (props) => {
     datesFormt,
     'Hospitalized Current in Us',
     hospitalizedCurr,
-    'rgba(200, 206, 86, 0.5)'
+    'rgba(255, 180, 1, 0.5)'
   );
 
   return (
