@@ -124,10 +124,10 @@ const ChartGraph = (props) => {
         <Line data={hospChangeChartData} />
         <h3>Source: The COVID Tracking Project</h3>
       </div>
-      <div className="incChart">
+      {/* <div className="incChart">
         <Line data={increaseChartData} />
         <h3>Source: The COVID Tracking Project</h3>
-      </div>
+      </div> */}
     </div>
   );
 };
