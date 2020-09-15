@@ -1,5 +1,5 @@
 function configChart(data, passApi) {
-  console.log(data);
+  // console.log(data);
   const myData = data
     .map((item, idx) => {
       if (idx % 3 === 0) {
