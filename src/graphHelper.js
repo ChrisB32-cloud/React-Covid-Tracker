@@ -16,31 +16,7 @@ function lineGraph(datesLables, chartLable, chartData, lineColor) {
       },
     ],
     options: {
-      // color: '#fff',
-      // scales: {
-      //   xAxes: [
-      //     {
-      //       ticks: {
-      //         // try with 0 value and uncomment min
-      //         color: '#fff'
-      //         // beginAtZero: true,
-      //         // min: 0
-      //         // color: 'blue'
-      //       }
-      //     }
-      //   ],
-      //   yAxes: [
-      //     {
-      //       ticks: {
-      //         // try with 0 value and uncomment min
-      //         color: '#fff'
-      //         // beginAtZero: true,
-      //         // min: 0
-      //         // color: 'blue'
-      //       }
-      //     }
-      //   ]
-      // }
+
       legend: {
         scales: {
           xAxes: [
