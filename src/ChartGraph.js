@@ -7,6 +7,7 @@ import { Line } from 'react-chartjs-2';
 
 // Think about putting the object in the return and using hooks
 // to update the particular data we want to update
+// Did to update, and check values for accuratcey
 
 const ChartGraph = (props) => {
   const dataApi = props.resp;
