@@ -58,7 +58,7 @@ const ChartGraph = (props) => {
     datesFormt,
     'Positive Cases in Us',
     positiveTot,
-    'rgba(255, 99, 132, 0.5)'
+    'rgba(255, 99, 130, 0.5)'
   );
   const positiveChangeChartData = lineGraph(
     datesFormt,
